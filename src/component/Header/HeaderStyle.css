@@ -1,0 +1,23 @@
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    box-shadow: 1px 1px 20px rgb(126, 34, 206) !important; /* Ensure your custom box-shadow is applied */
+    background-image: linear-gradient(to right, rgb(187, 247, 208), rgb(74, 222, 128), rgb(126, 34, 206));  
+}
+
+.brand-text {
+    font: 400 28px/150% Henny Penny, -apple-system, Roboto, Helvetica, sans-serif;
+  }
+
+.nav-link :hover {
+    filter: drop-shadow(1px 1px 20px rgb(131, 2, 244)) 
+}
+
+.navbar-toggler-icon {
+    background-image: var(--mdb-navbar-toggler-icon-bg) !important;
+  }

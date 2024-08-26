@@ -1,0 +1,125 @@
+
+  .overlay-texttitle {
+    position: absolute;
+    top: 48%; /* Center vertically */
+    left: 20%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust positioning */
+    color: rgba(255, 255, 255, 0.829); /* Text color */
+    text-shadow: 2px 2px 4px rgba(0, 144, 17, 0.751); /* Optional: Add text shadow */
+    text-align: center;
+    animation: fadeInSlideUp 1.6s ease-in-out; /* Apply animation */
+  }
+
+  @keyframes fadeInSlideUp {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -60%);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .title{
+    font: 400 43px/150% Henny Penny, -apple-system, Roboto, Helvetica, sans-serif;
+  }
+
+  .text {
+    color: rgba(255, 255, 255, 0.71); /* Text color */
+    font-size: 1.1rem; /* Text size */
+    font-weight: initial; /* Text weight */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Add text shadow */
+   
+  }
+  
+  /* Responsive styles for mobile devices */
+
+  @media (max-width: 768px) {
+    .overlay-texttitle {
+      display: none; /* Hide overlay text on smaller screens */
+    }
+  
+  }
+
+  
+@media (max-width: 1024px) {
+  .overlay-texttitle {
+    top: 30%; /* Center vertically */
+    font-size: 0.5rem; /* Adjust font size */
+    width: 80%; /* Ensure the text fits within the container */
+  }
+
+  .text {
+    font-size: 0.7rem; /* Adjust font size */
+  }
+
+  .title{
+    font: 400 30px/150% Henny Penny, -apple-system, Roboto, Helvetica, sans-serif;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .overlay-texttitle {
+    top: 35%; /* Center vertically */
+    width: 90%; /* Ensure the text fits within the container */
+  }
+
+  .title{
+    font: 400 40px/150% Henny Penny, -apple-system, Roboto, Helvetica, sans-serif;
+  }
+
+}
+
+/* HomeStyle.css */
+
+
+
+.image-container {
+  overflow: hidden; /* Ensure the image doesn't overflow the container */
+}
+
+.image-container img {
+  animation: scaleAnimation 10s infinite ease-in-out; /* Apply the animation */
+  width: 100%; /* Ensure the image takes full width */
+}
+
+@keyframes scaleAnimation {
+  0%, 100% {
+    transform: scale(1); /* Start and end at the original size */
+  }
+  50% {
+    transform: scale(1.3); /* Scale up slightly at the middle */
+  }
+}
+
+
+.overlay-texttitle .title,
+.overlay-texttitle .text {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.overlay-texttitle:hover .title,
+.overlay-texttitle:hover .text {
+  transform: translateY(-10px);
+  opacity: 0.8;
+}
+
+.page-appear {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.page-appear-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 500ms, transform 500ms;
+}
+
+
+
+
+
+  
+  
+
+ 
